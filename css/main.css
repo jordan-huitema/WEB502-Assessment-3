@@ -24,7 +24,7 @@ header .header-elements-top { display: flex; align-items: center; height: 50%; }
 
 header .header-elements-top button, header .header-elements-top div { height: 100%; font-size: 1em; }
 
-header .header-elements-top button { border: none; text-decoration: none; font-weight: bolder; background-color: transparent; color: #ffffff; cursor: pointer; }
+header .header-elements-top button { border: none; text-decoration: none; font-weight: bolder; background-color: transparent; color: #ffffff; white-space: nowrap; cursor: pointer; }
 
 header .header-elements-top button img { padding: 0; width: 1.5em; height: 1.5em; align-self: center; margin-right: 0.5em; border-radius: 100%; }
 
@@ -32,7 +32,7 @@ header .header-elements-top button p::first-letter { text-transform: uppercase; 
 
 header .header-elements-top button:hover { background-color: #f58192; }
 
-header .header-elements-top > div:last-of-type { flex-grow: 0; }
+header .header-elements-top > div:last-of-type { flex-grow: 0; display: flex; flex-direction: column; }
 
 header .header-elements-top > div:last-of-type button { display: flex; align-items: center; }
 
