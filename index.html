@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Brapp Brapp</title>
+    <meta name="description" content="Brapp Brapp">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../imgs/logo-icon.webp">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- Java Script Link -->
+    <script src="../js/hide-and-seek.js"></script>
+    <script src="../js/switch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+
+    <!-- Font Awesome Link -->
+    <link href="../fontawesome/css/all.css" rel="stylesheet">
+
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+  <div id="landing">
+  <header>
+    <img src="../imgs/logo.webp" alt="logo img" onclick="window.location.href='../index.html'">
+    <div>
+        <div class="header-elements">
+            <div class="header-elements-top hide">
+                <button onclick="window.location.href='../index.html'">Home</button>
+                <button onclick="window.location.href='../pages/category.html'">Categorys</button>
+                <button onclick="browsePage('all')">Bikes</button>
+                <button onclick="window.location.href='../pages/404.html'">Finance</button>
+                <button onclick="window.location.href='../pages/404.html'">Servicing</button>
+                <button onclick="window.location.href='../pages/404.html'">Parts</button>
+                <button onclick="window.location.href='../pages/404.html'">Insurance</button>
+                <button onclick="window.location.href='../pages/404.html'">Store Locator</button>
+                <div></div>
+            </div>
+            <div class="header-elements-search">
+                <i class="fa fa-search"></i>
+                <input type="text" name="search box">
+            </div>
+        </div>
+        <i class="mobile-menu fas fa-bars fa-3x" onclick="toggle(`header-elements-top`)"></i>
+    </div>
+</header>
+  
+    <div id="home-showcase-img"><img alt="source https://pixabay.com/photos/motocross-ride-landscape-panoramic-3242291/"
+            src="/imgs/Landing.webp"></div>
+    <div class="img-carousel">
+        <div onclick="browsePage('Dirt')">
+            <img class="img" src="/imgs/dirt.webp"
+                alt="Scource https://www.pexels.com/photo/vehicle-portrait-bike-motorbike-57390/">
+            <h2>Dirt Bikes</h2>
+        </div>
+        <div onclick="browsePage('Dual Sport')">
+            <img class="img" src="/imgs/dualsport.webp"
+                alt="Scource https://www.pexels.com/photo/gray-dual-sport-motorcycle-3207479/">
+            <h2>Dual Sport Bikes</h2>
+        </div>
+        <div onclick="browsePage('Adventure')">
+            <img class="img" src="/imgs/adventure.webp" alt="Scource https://unsplash.com/photos/oQ1JNNKGIQs">
+            <h2>Adventure Bikes</h2>
+        </div>
+        <div onclick="browsePage('Sports')">
+            <img class="img" src="/imgs/sports.webp"
+                alt="Scource https://www.pexels.com/photo/black-motorcycle-parked-in-forest-3759740/">
+            <h2>Sports Bikes</h2>
+        </div>
+        <div onclick="browsePage('Cruise')">
+            <img class="img" src="/imgs/cruise.webp" alt="Scource https://unsplash.com/photos/wxSb4-Lxt3Y">
+            <h2>Cruise Bikes</h2>
+        </div>
+    </div>
+</div>  <!-- End of landing div, Start is in _layouts/home.html-->
+<div id="location">
+    <div id="location-map">
+        <iframe class="home-map haulashore"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.9520725710386!2d173.25527440144515!3d-41.26637942917372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d3bed365ed7c679%3A0xf00ef876559c720!2sHaulashore%20Island!5e0!3m2!1sen!2snz!4v1601931505634!5m2!1sen!2snz"
+            aria-hidden="false" tabindex="0"></iframe>
+        <iframe class="home-map stewartIsland hide"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10898.161451813014!2d168.1239528391445!3d-46.93141786469217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9cd5b8d138b2203%3A0xf00ef876559d290!2sUlva%20Island!5e0!3m2!1sen!2snz!4v1601931899831!5m2!1sen!2snz"
+            aria-hidden="false" tabindex="0"></iframe>
+        <iframe class="home-map adamsIsland hide"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80548.88684683063!2d165.98611340220765!3d-50.88388384279549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9b31371151ba51b%3A0xd7a123514849964f!2sAdams%20Island!5e0!3m2!1sen!2snz!4v1601932002805!5m2!1sen!2snz"
+            aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div id="location-list">
+        <h2><i class="fas fa-map-marked-alt"></i> Our Store Locations</h2>
+        <button class="home-map-switch active" id="haulashore" onclick="switchTo(`haulashore`, `home-map-switch`)">Haulashore Island</button>
+        <button class="home-map-switch" id="stewartIsland" onclick="switchTo(`stewartIsland`, `home-map-switch`)">Stewart Island</button>
+        <button class="home-map-switch" id="adamsIsland" onclick="switchTo(`adamsIsland`, `home-map-switch`)">Adams Island</button>
+    </div>
+</div>
+  <footer class="footer">
+    <div class="footer-index">
+        <div>
+            <h3>Site Map</h3>
+            <p onclick="window.location.href=`/index.html`">Home</p>
+            <p onclick="window.location.href=`/pages/category.html`">Categorys</p>
+            <p onclick="window.location.href=`/pages/browse.html`">Bikes</p>
+            <p onclick="window.location.href=`/pages/404.html`">Finance</p>
+        </div>
+        <div>
+            <p onclick="window.location.href=`/pages/404.html`">Servicing</p>
+            <p onclick="window.location.href=`/pages/404.html`">Parts</p>
+            <p onclick="window.location.href=`/pages/404.html`">Insurance</p>
+            <p onclick="window.location.href=`/pages/404.html`">Store Locator</p>
+        </div>
+    </div>
+    <hr class="footer-break">
+    <div class="footer-contact">
+        <div class="footer-contact-elms">
+            <div>
+                <h3>Contact Us</h3>
+                <div class="footer-contact-elms-email">
+                    <input type="text" name="email box" placeholder="Send us a message">
+                    <i class="fas fa-envelope-square fa-2x"></i>
+                </div>
+                <p>BrappBrapp@gmail.com</p>
+            </div>
+            <div>
+                <div class="footer-contact-elms-social">
+                    <i class="fab fa-facebook-square fa-3x"></i>
+                    <i class="fab fa-google-plus-square fa-3x"></i>
+                    <i class="fab fa-instagram-square fa-3x"></i>
+                </div>
+                <p><b>(+64)-283-5555-5</b></p>
+            </div>
+        </div>
+    </div>
+  <script src="../js/login.js"></script>
+  <script src="../js/dynamic.js"></script>
+</footer>
+</body>
+
+</html>

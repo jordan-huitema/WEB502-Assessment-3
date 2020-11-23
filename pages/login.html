@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Brapp Brapp</title>
+    <meta name="description" content="Brapp Brapp">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../imgs/logo-icon.webp">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- Java Script Link -->
+    <script src="../js/hide-and-seek.js"></script>
+    <script src="../js/switch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+
+    <!-- Font Awesome Link -->
+    <link href="../fontawesome/css/all.css" rel="stylesheet">
+
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <img src="../imgs/logo.webp" alt="logo img" onclick="window.location.href='../index.html'">
+    <div>
+        <div class="header-elements">
+            <div class="header-elements-top hide">
+                <button onclick="window.location.href='../index.html'">Home</button>
+                <button onclick="window.location.href='../pages/category.html'">Categorys</button>
+                <button onclick="browsePage('all')">Bikes</button>
+                <button onclick="window.location.href='../pages/404.html'">Finance</button>
+                <button onclick="window.location.href='../pages/404.html'">Servicing</button>
+                <button onclick="window.location.href='../pages/404.html'">Parts</button>
+                <button onclick="window.location.href='../pages/404.html'">Insurance</button>
+                <button onclick="window.location.href='../pages/404.html'">Store Locator</button>
+                <div></div>
+            </div>
+            <div class="header-elements-search">
+                <i class="fa fa-search"></i>
+                <input type="text" name="search box">
+            </div>
+        </div>
+        <i class="mobile-menu fas fa-bars fa-3x" onclick="toggle(`header-elements-top`)"></i>
+    </div>
+</header>
+  <div class="login">
+    <div>
+        <div class="login-signIn">
+            <h3>Login</h3>
+            <label for="signIn-_email">Email</label>
+            <input id="signIn-_email" type="email" name="signIn-_email" placeholder="Email">
+            <label for="signIn-_password">Password</label>
+            <input id="signIn-_password" type="password" name="signIn-_password" placeholder="Password">
+            <button onclick="signIn()">Login</button>
+        </div>
+        <div class="login-signUp">
+            <h3>Sign Up</h3>
+            <label for="signUp-_firstName">First Name</label>
+            <input id="signUp-_firstName" type="text" name="signUp-_firstName" placeholder="First Name">
+            <label for="signUp-_lastName">Last Name</label>
+            <input id="signUp-_lastName" type="text" name="signUp-_lastName" placeholder="Last Name">
+            <label for="signUp-_email">Email</label>
+            <input id="signUp-_email" type="email" name="signUp-_email" placeholder="Email">
+            <label for="signUp-_password">Password</label>
+            <input id="signUp-_password" type="password" name="signUp-_password" placeholder="Password">
+            <label for="signUp-_password">Confirm Password</label>
+            <input id="signUp-_password2" type="password" name="signUp-_password" placeholder="Password">
+            <button onclick="signUp()">Sign Up</button>
+        </div>
+    </div>
+</div>
+  <footer class="footer">
+    <div class="footer-index">
+        <div>
+            <h3>Site Map</h3>
+            <p onclick="window.location.href=`/index.html`">Home</p>
+            <p onclick="window.location.href=`/pages/category.html`">Categorys</p>
+            <p onclick="window.location.href=`/pages/browse.html`">Bikes</p>
+            <p onclick="window.location.href=`/pages/404.html`">Finance</p>
+        </div>
+        <div>
+            <p onclick="window.location.href=`/pages/404.html`">Servicing</p>
+            <p onclick="window.location.href=`/pages/404.html`">Parts</p>
+            <p onclick="window.location.href=`/pages/404.html`">Insurance</p>
+            <p onclick="window.location.href=`/pages/404.html`">Store Locator</p>
+        </div>
+    </div>
+    <hr class="footer-break">
+    <div class="footer-contact">
+        <div class="footer-contact-elms">
+            <div>
+                <h3>Contact Us</h3>
+                <div class="footer-contact-elms-email">
+                    <input type="text" name="email box" placeholder="Send us a message">
+                    <i class="fas fa-envelope-square fa-2x"></i>
+                </div>
+                <p>BrappBrapp@gmail.com</p>
+            </div>
+            <div>
+                <div class="footer-contact-elms-social">
+                    <i class="fab fa-facebook-square fa-3x"></i>
+                    <i class="fab fa-google-plus-square fa-3x"></i>
+                    <i class="fab fa-instagram-square fa-3x"></i>
+                </div>
+                <p><b>(+64)-283-5555-5</b></p>
+            </div>
+        </div>
+    </div>
+  <script src="../js/login.js"></script>
+  <script src="../js/dynamic.js"></script>
+</footer>
+</body>
+
+</html>
